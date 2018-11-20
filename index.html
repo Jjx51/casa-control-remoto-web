@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>Casa control remoto</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDMhH1NzcAJh6xlW5zre1OaBLBVOB8DhXs",
+    authDomain: "casitacontrolremoto.firebaseapp.com",
+    databaseURL: "https://casitacontrolremoto.firebaseio.com",
+    projectId: "casitacontrolremoto",
+    storageBucket: "casitacontrolremoto.appspot.com",
+    messagingSenderId: "1020156636548"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!-- Save for Web Slices (Captura de pantalla 2018-10-05 17.58.31.png) -->
+<table id="Tabla_01" width="307" height="517" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2" id= "d1f">
+			<a href="javascript:d1f()"><img src="imagenes/a01.gif" width="151" height="143" alt=""></a></td>
+
+		<td colspan="2" id= "d2f">
+			<a href="javascript:d2f()"><img src="imagenes/a02.gif" width="155" height="143" alt=""></a></td>
+		<td>
+
+		<td>
+			<img src="imagenes/aespacio.gif" width="1" height="143" alt=""></td>
+	</tr>
+	<tr>
+		<td id= "d3f">
+			<a href="javascript:d3f()"><img src="imagenes/a03.gif" width="104" height="132" alt=""></a></td>
+
+		<td id= "d4f"colspan="2" rowspan="4">
+			<a href="javascript:d4f()"><img src="imagenes/a04.gif" width="106" height="373" alt=""></a></td>
+
+		<td id="d5f" rowspan="2">
+			<a href="javascript:d5f()"><img src="imagenes/a05.gif" width="96" height="215" alt=""></a></td>
+		<td>
+
+			<img src="imagenes/aespacio.gif" width="1" height="132" alt=""></td>
+	</tr>
+
+
+	<tr>
+		<td id="d6f" rowspan="2">
+			<a href="javascript:d6f()"><img src="imagenes/a06.gif" width="104" height="106" alt=""></a></td>
+		<td>
+			<img src="imagenes/aespacio.gif" width="1" height="83" alt=""></td>
+	</tr>
+	<tr>
+		<td id="d7f" rowspan="2">
+			<a href="javascript:d7f()"><img src="imagenes/a07.gif" width="96" height="158" alt=""></a></td>
+		<td>
+			<img src="imagenes/aespacio.gif" width="1" height="23" alt=""></td>
+	</tr>
+	<tr>
+		<td id="d8f">
+			<a href="javascript:d8f()"><img src="imagenes/a08.gif" width="104" height="135" alt=""></a></td>
+		<td>
+			<img src="imagenes/aespacio.gif" width="1" height="135" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="imagenes/aespacio.gif" width="104" height="1" alt=""></td>
+		<td>
+			<img src="imagenes/aespacio.gif" width="47" height="1" alt=""></td>
+		<td>
+			<img src="imagenes/aespacio.gif" width="59" height="1" alt=""></td>
+		<td>
+			<img src="imagenes/aespacio.gif" width="96" height="1" alt=""></td>
+		<td></td>
+	</tr>
+</table>
+<br>
+<!-- End Save for Web Slices -->
+<script>
+	// Get a reference to the database service
+
+var referenciaHabitacion1 = firebase.database().ref("habitacion1");
+referenciaHabitacion1.on('value', function(snapshot) {
+  if (snapshot.val()==1) {
+  	document.getElementById("d1f").innerHTML ='<a href="javascript:d1f()"><img src="imagenes/01.gif" width="151" height="143" alt=""></a>';
+  }else{
+  	document.getElementById("d1f").innerHTML ='<a href="javascript:d1f()"><img src="imagenes/a01.gif" width="151" height="143" alt=""></a>';
+  }
+});
+
+var referenciaHabitacion2 = firebase.database().ref("habitacion2");
+referenciaHabitacion2.on('value', function(snapshot) {
+  if (snapshot.val()==1) {
+  	document.getElementById("d2f").innerHTML ='<a href="javascript:d2f()"><img src="imagenes/02.gif" width="151" height="143" alt=""></a>';
+  }else{
+  	document.getElementById("d2f").innerHTML ='<a href="javascript:d2f()"><img src="imagenes/a02.gif" width="151" height="143" alt=""></a>';
+  }
+});
+
+var referenciaWc = firebase.database().ref("wc");
+referenciaWc.on('value', function(snapshot) {
+  if (snapshot.val()==1) {
+  	document.getElementById("d3f").innerHTML ='<a href="javascript:d3f()"><img src="imagenes/03.gif" width="104" height="132" alt=""></a>';
+  }else{
+  	document.getElementById("d3f").innerHTML ='<a href="javascript:d3f()"><img src="imagenes/a03.gif" width="104" height="132" alt=""></a>';
+  }
+});
+
+var referenciaSala = firebase.database().ref("sala");
+referenciaSala.on('value', function(snapshot) {
+  if (snapshot.val()==1) {
+  	document.getElementById("d4f").innerHTML ='<a href="javascript:d4f()"><img src="imagenes/04.gif" width="106" height="373" alt=""></a>';
+  }else{
+  	document.getElementById("d4f").innerHTML ='<a href="javascript:d4f()"><img src="imagenes/a04.gif" width="106" height="373" alt=""></a>';
+  }
+});
+
+var referenciaJardin = firebase.database().ref("jardin");
+referenciaJardin.on('value', function(snapshot) {
+  if (snapshot.val()==1) {
+  	document.getElementById("d5f").innerHTML ='<a href="javascript:d5f()"><img src="imagenes/05.gif" width="96" height="215" alt=""></a>';
+  }else{
+  	document.getElementById("d5f").innerHTML ='<a href="javascript:d5f()"><img src="imagenes/a05.gif" width="96" height="215" alt=""></a>';
+  }
+});
+
+var referenciaCuartoLavado = firebase.database().ref("cuartoLavado");
+referenciaCuartoLavado.on('value', function(snapshot) {
+  if (snapshot.val()==1) {
+  	document.getElementById("d6f").innerHTML ='<a href="javascript:d6f()"><img src="imagenes/06.gif" width="104" height="106" alt=""></a>';
+  }else{
+  	document.getElementById("d6f").innerHTML ='<a href="javascript:d6f()"><img src="imagenes/a06.gif" width="104" height="106" alt=""></a>';
+  }
+});
+
+var referenciaEntrada = firebase.database().ref("entrada");
+referenciaEntrada.on('value', function(snapshot) {
+  if (snapshot.val()==1) {
+  	document.getElementById("d7f").innerHTML ='<a href="javascript:d7f()"><img src="imagenes/07.gif" width="96" height="158" alt=""></a>';
+  }else{
+  	document.getElementById("d7f").innerHTML ='<a href="javascript:d7f()"><img src="imagenes/a07.gif" width="96" height="158" alt=""></a>';
+  }
+});
+
+var referenciaCocina = firebase.database().ref("cocina");
+referenciaCocina.on('value', function(snapshot) {
+  if (snapshot.val()==1) {
+  	document.getElementById("d8f").innerHTML ='<a href="javascript:d8f()"><img src="imagenes/08.gif" width="104" height="135" alt=""></a>';
+  }else{
+  	document.getElementById("d8f").innerHTML ='<a href="javascript:d8f()"><img src="imagenes/a08.gif" width="104" height="135" alt=""></a>';
+  }
+});
+
+
+</script>
+</body>
+</html>
